@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Cencoring word </title>
+    </head>
+
+    <body>
+
+        <h1>Cencoring Words in a String</h1>
+
+        <label> Cencoring Words, <em>Tell us something</em></label>
+        <textarea id="userreview"></textarea>
+        <input type="button" id="submitreview" value="submit review for publication">
+
+        <script>
+            function editreview() {
+                const textarea= document.getElementById('userreview');
+                let badwords = /dolor|elit|quis|nisi|fugiat|proident|laborum/gi;
+                let userreview1 = textarea.value;
+                let userreview2 = userreview1.replace(badwords,'*****');
+                document.getElementById('userreview').value = userreview2;
+            }
+            document.getElementById('submitreview').addEventListener('click',editReview);
+
+        </script>
+    </body>
+</html>
